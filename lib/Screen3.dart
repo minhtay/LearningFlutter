@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'util/CustomElevatedButton.dart';
 
-class Screen2 extends StatefulWidget {
-  const Screen2({super.key});
+class Screen3 extends StatefulWidget {
+  const Screen3({super.key});
 
   @override
-  State<Screen2> createState() => _Screen2State();
+  State<Screen3> createState() => _Screen3State();
 }
 
-class _Screen2State extends State<Screen2> {
+class _Screen3State extends State<Screen3> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -65,6 +65,16 @@ class _Screen2State extends State<Screen2> {
                             ),
                           ),
                           SizedBox(height: 10),
+                          Text('Email', style: TextStyle(fontSize: 15)),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              alignLabelWithHint: true,
+                              hintText: 'Enter your email',
+                              hintStyle: TextStyle(fontSize: 12),
+                              suffixIcon: Icon(Icons.check),
+                            ),
+                          ),
+                          SizedBox(height: 10),
                           Text('Password', style: TextStyle(fontSize: 15)),
                           TextFormField(
                             decoration: InputDecoration(
@@ -75,18 +85,14 @@ class _Screen2State extends State<Screen2> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Stack(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 50,
-                              ),
-                              Align(
-                                alignment: Alignment.topRight,
-                                child: Text('Forgot Password?',
-                                    style: TextStyle(fontSize: 12)),
-                              ),
-                            ],
+                          Text('Password', style: TextStyle(fontSize: 15)),
+                          TextFormField(
+                            decoration: InputDecoration(
+                              alignLabelWithHint: true,
+                              hintText: 'Enter your password',
+                              hintStyle: TextStyle(fontSize: 12),
+                              suffixIcon: Icon(Icons.visibility),
+                            ),
                           )
                         ],
                       ),
