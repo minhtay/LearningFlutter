@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'util/CustomElevatedButton.dart';
+import 'util/CustomTextFieldForPassword.dart';
 
 class Screen3 extends StatefulWidget {
   const Screen3({super.key});
@@ -55,21 +56,21 @@ class _Screen3State extends State<Screen3> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: 70),
-                          Text('Email', style: TextStyle(fontSize: 15)),
+                          Text('Full Name', style: TextStyle(fontSize: 15)),
                           TextFormField(
                             decoration: InputDecoration(
                               alignLabelWithHint: true,
-                              hintText: 'Enter your email',
+                              hintText: 'Enter your full name',
                               hintStyle: TextStyle(fontSize: 12),
                               suffixIcon: Icon(Icons.check),
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text('Email', style: TextStyle(fontSize: 15)),
+                          Text('Phone or Email', style: TextStyle(fontSize: 15)),
                           TextFormField(
                             decoration: InputDecoration(
                               alignLabelWithHint: true,
-                              hintText: 'Enter your email',
+                              hintText: 'Enter your phone or email',
                               hintStyle: TextStyle(fontSize: 12),
                               suffixIcon: Icon(Icons.check),
                             ),
@@ -85,15 +86,16 @@ class _Screen3State extends State<Screen3> {
                             ),
                           ),
                           SizedBox(height: 10),
-                          Text('Password', style: TextStyle(fontSize: 15)),
+                          Text('Confirm Password', style: TextStyle(fontSize: 15)),
                           TextFormField(
                             decoration: InputDecoration(
                               alignLabelWithHint: true,
-                              hintText: 'Enter your password',
+                              hintText: 'Enter your confirm password',
                               hintStyle: TextStyle(fontSize: 12),
                               suffixIcon: Icon(Icons.visibility),
                             ),
-                          )
+                          ),
+                          CustomTextFieldForPassword()
                         ],
                       ),
                       CustomElevatedButton(
